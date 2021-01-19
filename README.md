@@ -305,3 +305,5 @@ class AutoRenewSubscription
 
 # Testing
 TODO: add testing examples.
+
+upstream setting test
