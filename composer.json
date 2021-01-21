@@ -18,10 +18,10 @@
         }
     ],
     "require": {
-        "php": ">=7.1",
+        "php": ">=7.0",
         "ext-json": "*",
         "imdhemy/appstore-iap": "^0.3",
-        "imdhemy/google-play-billing": "^0.3",
+        "leehwui/google-play-billing": "dev-master",
         "nesbot/carbon": "1.22.1"
     },
     "require-dev": {
@@ -60,5 +60,11 @@
                 "Subscription": "\\Imdhemy\\Purchases\\Facades\\Subscription"
             }
         }
-    }
+    },
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/leehwui/google-play-billing.git"
+        }
+    ]
 }
