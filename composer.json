@@ -1,5 +1,5 @@
 {
-    "name": "imdhemy/laravel-purchases",
+    "name": "leehwui/laravel-in-app-purchases",
     "description": "Laravel receipt validator for Google Play",
     "keywords": [
         "laravel-in-app-purchases",
@@ -7,7 +7,7 @@
         "in_app_purchases",
         "laravel"
     ],
-    "homepage": "https://github.com/imdhemy/laravel-in-app-purchases",
+    "homepage": "https://github.com/leehwui/laravel-in-app-purchases",
     "license": "MIT",
     "authors": [
         {
@@ -22,7 +22,7 @@
         "ext-json": "*",
         "imdhemy/appstore-iap": "^0.3",
         "imdhemy/google-play-billing": "^0.3",
-        "nesbot/carbon": "^2.41"
+        "nesbot/carbon": "1.22.1"
     },
     "require-dev": {
         "friendsofphp/php-cs-fixer": "^2.17",
