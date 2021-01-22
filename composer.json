@@ -20,9 +20,9 @@
     "require": {
         "php": ">=7.0",
         "ext-json": "*",
-        "nesbot/carbon": "1.22.1",
-        "levoteam/google-play-billing": "1.0.4",
-        "levoteam/appstore-iap": "1.0.2"
+        "nesbot/carbon": ">=1.22.1",
+        "levoteam/google-play-billing": "1.0.5",
+        "levoteam/appstore-iap": "1.0.3"
     },
     "autoload": {
         "psr-4": {
