@@ -21,8 +21,8 @@
         "php": ">=7.0",
         "ext-json": "*",
         "nesbot/carbon": "1.22.1",
-        "leehwui/google-play-billing": "dev-master",
-        "leehwui/appstore-iap": "dev-master"
+        "leehwui/google-play-billing": "1.0.0",
+        "leehwui/appstore-iap": "0.3.6"
     },
     "require-dev": {
         "friendsofphp/php-cs-fixer": "^2.17",
