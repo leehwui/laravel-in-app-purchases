@@ -24,13 +24,6 @@
         "leehwui/google-play-billing": "1.0.0",
         "leehwui/appstore-iap": "0.3.6"
     },
-    "require-dev": {
-        "friendsofphp/php-cs-fixer": "^2.17",
-        "orchestra/testbench": "^5.0",
-        "phpunit/phpunit": "^8.5",
-        "psalm/plugin-laravel": "^1.2",
-        "vimeo/psalm": "^4.3"
-    },
     "autoload": {
         "psr-4": {
             "Imdhemy\\Purchases\\": "src"
