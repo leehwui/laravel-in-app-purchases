@@ -57,11 +57,11 @@
     "repositories": [
         {
             "type": "vcs",
-            "url": "https://github.com/leehwui/google-play-billing.git"
+            "url": "git@bitbucket.org:levoteam/appstore-iap.git"
         },
         {
             "type": "vcs",
-            "url": "https://github.com/leehwui/appstore-iap.git"
+            "url": "git@bitbucket.org:levoteam/google-play-billing.git"
         }
     ]
 }
