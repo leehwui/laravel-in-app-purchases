@@ -47,7 +47,7 @@ class PurchaseServiceProvider extends ServiceProvider
     /**
      * boots routes
      */
-    public function bootRoutes(): void
+    public function bootRoutes() 
     {
         Route::group($this->routeConfig(), function () {
             $this->loadRoutesFrom(__DIR__ . '/routes/routes.php');
@@ -57,7 +57,7 @@ class PurchaseServiceProvider extends ServiceProvider
     /**
      * publish configurations
      */
-    public function publishConfig(): void
+    public function publishConfig() 
     {
         $paths = [__DIR__ . '/../config/purchase.php' => config_path('purchase.php')];
         $this->publishes($paths, 'config');
