@@ -160,7 +160,7 @@ class Subscription
      * @param string|null $developerPayload
      * @throws GuzzleException
      */
-    public function acknowledge(?string $developerPayload = null) 
+    public function acknowledge(string $developerPayload = null) 
     {
         $this->createSubscription()->acknowledge($developerPayload);
     }
