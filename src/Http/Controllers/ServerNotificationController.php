@@ -13,6 +13,11 @@ use Imdhemy\Purchases\Http\Requests\GoogleDeveloperNotificationRequest;
 use Imdhemy\Purchases\ServerNotifications\AppStoreServerNotification;
 use Imdhemy\Purchases\ServerNotifications\GoogleServerNotification;
 
+use Imdhemy\AppStore\Receipts\Verifier;
+use Imdhemy\AppStore\ClientFactory;
+use Imdhemy\AppStore\Exceptions\InvalidReceiptException;
+
+
 class ServerNotificationController extends Controller
 {
     /**
@@ -48,6 +53,24 @@ class ServerNotificationController extends Controller
     public function apple(AppStoreServerNotificationRequest $request)
     {
         $attributes = $request->all();
+
+        $receiptData = $attributes['unified_receipt']['latest_receipt'];
+        $password = config('purchase.appstore_password');
+        $sandbox = (bool)config('purchase.appstore_sandbox');
+        $client = ClientFactory::create($sandbox);
+        $verifier = new Verifier($client, $receiptData, $password);
+
+        $passed = false;
+        try {
+            $response = $verifier->verifyRenewable();
+
+            $passed = $response->getStatus()->isValid();
+        } catch (InvalidReceiptException $e) {
+            Log::info($e->getMessage());
+            Log::info($e->getCode());
+            exit;
+        }
+        
         $serverNotification = ServerNotification::fromArray($attributes);
         $appStoreNotification = new AppStoreServerNotification($serverNotification);
 
